@@ -1,0 +1,42 @@
+﻿<Window x:Class="HelloWorld.SecondWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HelloWorld"
+        mc:Ignorable="d"
+        Title="SecondWindow" Height="450" Width="800">
+    <Grid>
+        <ListView x:Name="uxList">
+
+            <ListView.View>
+                <GridView AllowsColumnReorder="true" 
+                          ColumnHeaderToolTip="Employee Information" >
+
+                    <GridViewColumn DisplayMemberBinding=
+                          "{Binding Path=Name}" Width="100" >
+                        <GridViewColumnHeader Click="uxName_Click">Name
+                            <GridViewColumnHeader.ContextMenu>
+                                <ContextMenu  MenuItem.Click="uxName_Click" Name="uxName_CM">
+                                </ContextMenu>
+                            </GridViewColumnHeader.ContextMenu>
+                        </GridViewColumnHeader>
+                    </GridViewColumn>
+
+                    <GridViewColumn DisplayMemberBinding=
+                          "{Binding Path=Password}" Width="100">
+                        <GridViewColumnHeader Click="uxPassword_Click">Password
+                            <GridViewColumnHeader.ContextMenu>
+                                <ContextMenu  MenuItem.Click="uxPassword_Click" Name="uxPassword_CM">
+                                </ContextMenu>
+                            </GridViewColumnHeader.ContextMenu>
+                        </GridViewColumnHeader>
+                    </GridViewColumn>
+
+                </GridView>
+
+            </ListView.View>
+
+        </ListView>
+    </Grid>
+</Window>
