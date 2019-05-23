@@ -1,0 +1,31 @@
+﻿@model Homework6.Models.BirthdayCard
+
+<!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Index</title>
+        <link href="~/Content/bootstrap.css" rel="stylesheet" />
+        <style>
+            .btn a {
+                color: white;
+                text-decoration: none;
+            }
+
+            body {
+                background-color: #f1f1f1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="text-center">
+            <div class="btn btn-success">
+                @Html.ActionLink("Send a Birthday Card", "SendCard")
+            </div>
+        </div>
+    </body>
+</html>
+
+
+
